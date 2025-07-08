@@ -4,13 +4,13 @@ import Home from "./pages/Home";
 import Kamba from "./pages/Kamba";
 import Nyamwezi from "./pages/Nyamwezi";
 import Kikuyu from "./pages/Kikuyu";
-import Chagga from "./pages/Chagga";
+import Sukuma from "./pages/Sukuma";
 import Banyakole from "./pages/Banyakole";
 import Buganda from "./pages/Buganda";
 import "./App.css";
 
 function App() {
-  const location = useLocation(); // Get the current route
+  const location = useLocation();
 
   return (
     <div className="container">
@@ -18,14 +18,13 @@ function App() {
         <h1>Traditional Cultures of East Africa</h1>
       </header>
 
-      {/* Conditionally render the navigation bar */}
       {location.pathname !== "/" && (
         <nav className="nav tribe-nav">
           <Link className="nav-home" to="/">Home</Link>
           <Link className="nav-kamba" to="/kamba">Kamba</Link>
           <Link className="nav-kikuyu" to="/kikuyu">Kikuyu</Link>
           <Link className="nav-nyamwezi" to="/nyamwezi">Nyamwezi</Link>
-          <Link className="nav-chagga" to="/chagga">Chagga</Link>
+          <Link className="nav-chagga" to="/sukuma">Sukuma</Link>
           <Link className="nav-banyakole" to="/banyakole">Banyakole</Link>
           <Link className="nav-buganda" to="/buganda">Buganda</Link>
         </nav>
@@ -36,7 +35,7 @@ function App() {
         <Route path="/kamba" element={<Kamba />} />
         <Route path="/nyamwezi" element={<Nyamwezi />} />
         <Route path="/kikuyu" element={<Kikuyu />} />
-        <Route path="/chagga" element={<Chagga />} />
+        <Route path="/sukuma" element={<Sukuma />} />
         <Route path="/banyakole" element={<Banyakole />} />
         <Route path="/buganda" element={<Buganda />} />
       </Routes>

@@ -16,10 +16,10 @@ export default function Kamba() {
       <h2>Kamba Tribe (Kenya)</h2>
 
       <h3>Traditional Foods</h3>
-      <p><strong>Muthokoi:</strong> Maize kernels and pigeon peas cooked with onions and tomatoes.</p>
+      <p><strong>Muthokoi:</strong> Muthokoi is the most common dish eaten by the Kamba. It consists of dehulled maize kernels cooked with pigeon peas(mbaazi), onions, tomatoes and salt. Traditionally prepared over fire in clay pots or metal pans. </p>
 
       <h3>Music & Dance</h3>
-      <p>Kilumi dance performed with drums and chants.</p>
+      <p><strong>Kilumi dance:</strong> A spiritual rainmaking and celebratory dance led by women in metallic-accented attire. Men drum as women chant and dance rhythmically.</p>
 
       <iframe
         width="100%"

@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Chagga() {
+export default function Sukuma() {
   return (
     <section className="section fade-in tribe-chagga">
-      <h2>Chagga Tribe (Tanzania)</h2>
+      <h2>Sukuma Tribe (Tanzania)</h2>
 
       <h3>Traditional Foods</h3>
       <p><strong>Machalari:</strong> Banana stew with beef or goat, served at events and family gatherings.</p>
