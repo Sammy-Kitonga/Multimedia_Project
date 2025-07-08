@@ -19,7 +19,7 @@ export default function Nyamwezi() {
       <p>Hiari ya Moyo – storytelling dance troupe from Tabora.</p>
       <iframe
         width="100%"
-        height="315"
+        height="500"
         src="https://www.youtube.com/embed/5_C-RW4IqrA"
         title="Nyamwezi Dance"
         frameBorder="0"
