@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.header {
+  text-align: center;
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* .nav a {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav a:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+} */
+
+.section {
+  padding: 30px 10px;
+  animation: fadeInSlide 1s ease forwards;
+  opacity: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.section:last-child {
+  border: none;
+}
+
+.section h2 {
+  color: #1e40af;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.section h3 {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+.section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.section iframe,
+.section video {
+  margin-top: 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.section audio {
+  margin-top: 15px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background-color: #f3f4f6;
+  border-top: 1px solid #d1d5db;
+  margin-top: 40px;
+  color: #6b7280;
+}
+.tribe-nav a {
+  padding: 10px 16px;
+  font-weight: bold;
+  color: white;
+  border-radius: 6px;
+  margin: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.tribe-banyakole {
+  background-color: #fdf3e7;
+  border-left: 5px solid #b45309;
+}
+
+.tribe-buganda {
+  background-color: #f0f4ff;
+  border-left: 5px solid #4338ca;
+}
+
+.tribe-kamba {
+  background-color: #fefce8;
+  border-left: 5px solid #ca8a04;
+}
+
+.tribe-nyamwezi {
+  background-color: #f3f8f3;
+  border-left: 5px solid #15803d;
+}
+
+.tribe-kikuyu {
+  background-color: #fff7f0;
+  border-left: 5px solid #c2410c;
+}
+
+.tribe-chagga {
+  background-color: #eefafc;
+  border-left: 5px solid #0e7490;
+}
+
+.nav-home{
+  background-color:#1d4ed8 ;
+}
+.nav-home:hover{
+  background-color:#2563eb ;
+}
+
+.nav-kamba {
+   background-color: #ca8a04; 
+  }
+.nav-kamba:hover { 
+  background-color: #eab308;
+ }
+
+.nav-nyamwezi { 
+  background-color: #15803d; 
+}
+.nav-nyamwezi:hover { 
+  background-color: #16a34a; 
+}
+
+.nav-kikuyu { 
+  background-color: #c2410c; 
+}
+.nav-kikuyu:hover { 
+  background-color: #ea580c; 
+}
+
+.nav-chagga { 
+  background-color: #0e7490; 
+}
+.nav-chagga:hover { 
+  background-color: #06b6d4; 
+}
+
+.nav-banyakole { 
+  background-color: #92400e; 
+}
+.nav-banyakole:hover {
+   background-color: #b45309; 
+}
+
+.nav-buganda { 
+  background-color: #4338ca; 
+}
+.nav-buganda:hover { 
+  background-color: #6366f1; 
+}
+
+
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
