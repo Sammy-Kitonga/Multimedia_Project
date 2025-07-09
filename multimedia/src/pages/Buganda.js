@@ -35,6 +35,7 @@ export default function Buganda() {
             alt="Buganda men"
             className="styled-image"
           />
+          <p className="image-caption">Buganda men wearing traditional Kanzu robes.</p>
         </div>
         <p>
           <strong>Women:</strong> Gomesi (colorful dress with sash and pointed shoulders).
@@ -45,6 +46,7 @@ export default function Buganda() {
             alt="Buganda women"
             className="styled-image"
           />
+          <p className="image-caption">Buganda women dressed in Gomesi attire.</p>
         </div>
         <p>
           <strong>Materials:</strong> Bark cloth, later cotton and silk.

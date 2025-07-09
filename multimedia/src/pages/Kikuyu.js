@@ -1,30 +1,58 @@
 import React from "react";
+import MorphingCard from "../components/MorphingCard";
+import "../App.css";
 
 export default function Kikuyu() {
   return (
     <section className="section fade-in tribe-kikuyu">
       <h2>Kikuyu Tribe (Kenya)</h2>
 
-      <h3>Traditional Foods</h3>
-      <p><strong>Githeri:</strong> Maize and beans boiled together, sometimes with vegetables or meat.</p>
+      <MorphingCard icon="🍲" title="Traditional Foods">
+        <ul>
+          <li><strong>Githeri:</strong> Maize and beans boiled together.</li>
+          <li><strong>Mukimo / Irio:</strong> Mashed potatoes, maize, and pumpkin leaves (Mukimo); Irio omits greens.</li>
+          <li><strong>Nyama Choma & Mũtura:</strong> Roasted meats and blood sausage for ceremonies and rituals.</li>
+          <li><strong>Ūcūrū & Muratina:</strong> Traditional fermented porridge and alcoholic brew served in gourds.</li>
+        </ul>
+      </MorphingCard>
 
-      <h3>Economic Practices</h3>
-      <ul>
-        <li>Agriculture: Yams, sugarcane, bananas</li>
-        <li>Trade of produce and handmade crafts</li>
-      </ul>
+      <MorphingCard icon="🎉" title="Marriage & Festivals">
+        <p>
+          <strong>Nguracio (Marriage):</strong> Involves dowry (Ruracio), planting a branch, shared porridge, and rituals.
+        </p>
+        <div className="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/kR68DDjrkYc?si=8o9AOkf9m8ubV4TR"
+            title="Kikuyu Marriage Ceremony"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </MorphingCard>
 
-      <h3>Music & Dance</h3>
-      <p>Traditional dances and <strong>Mũgithi</strong> involve storytelling, drumming, and line dancing.</p>
+      <MorphingCard icon="💼" title="Economic Practices">
+        <ul>
+          <li>Agriculture: Maize, beans, potatoes, tea, and coffee.</li>
+          <li>Livestock for food, leather; tanning as a craft.</li>
+          <li>Home brewing for community rituals.</li>
+        </ul>
+      </MorphingCard>
 
-      <h3>Traditional Attire</h3>
-      <ul>
-        <li>Women: Leather skirts, beadwork, head wraps</li>
-        <li>Men: Robes, shukas, belts</li>
-      </ul>
+      <MorphingCard icon="🪘" title="Music & Oral Traditions">
+        <p>Drums, flutes, horns guide songs and dances during harvest, weddings, and initiations. Elders pass down wisdom via proverbs and stories.</p>
+      </MorphingCard>
 
-      <h3>Beliefs</h3>
-      <p>Ngai (God) resides on Mount Kenya; rituals involve offerings and prayers to ancestors.</p>
+      <MorphingCard icon="🧥" title="Traditional Attire">
+        <ul>
+          <li><strong>Women:</strong> Muthuru (leather skirt), bead necklaces, cowrie shells, and a shawl.</li>
+          <li><strong>Men:</strong> Nyambari cloth wraps and animal skin cloaks (status symbol).</li>
+        </ul>
+      </MorphingCard>
+
+      <MorphingCard icon="🕊️" title="Beliefs & Spirituality">
+        <p>Ngai, the creator, is believed to dwell on Mount Kenya. Elders lead prayers and rituals near sacred trees and rivers for rain, fertility, and healing.</p>
+      </MorphingCard>
     </section>
   );
 }
