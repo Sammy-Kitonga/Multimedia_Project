@@ -99,9 +99,9 @@ export default function Home() {
                 </div>
                 <div
                   className="tribe-option"
-                  onClick={() => handleTribeSelection("chagga")}
+                  onClick={() => handleTribeSelection("sukuma")}
                 >
-                  Chagga
+                  Sukuma
                 </div>
               </>
             )}
