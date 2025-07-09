@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="container">
       <header className="header fade-in">
-        <h1>Traditional Cultures of East Africa</h1>
+        <h1>Ubuntu Heritage</h1>
       </header>
 
       {location.pathname !== "/" && (

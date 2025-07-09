@@ -33,7 +33,12 @@ export default function Kikuyu() {
         onVolumeChange={changeVolume}
       />
 
-      <MorphingCard icon="📜" title="Key Cultural Practices">
+      <div className="morph-cards-container">
+      <MorphingCard 
+        icon="📜" 
+        title="Key Cultural Practices"
+        backgroundImage="/assets/images/Kikuyu_beliefs.png"
+      >
         <p>
           <strong>Circumcision (Irua):</strong> Marks the transition into adulthood for both genders, accompanied by extensive teachings on societal duties, traditional songs, and ceremonial dances that preserve cultural knowledge.
         </p>
@@ -48,10 +53,24 @@ export default function Kikuyu() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="🍲" title="Traditional Foods">
+      <MorphingCard 
+        icon="🍲" 
+        title="Traditional Foods"
+        backgroundImage="/assets/images/Mukimo.png"
+      >
         <p>
           Kikuyu cuisine reflects their agricultural lifestyle and emphasizes communal sharing during ceremonies and daily life.
         </p>
+        <div className="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/ysgdc1SBetc"
+            title="Kikuyu Traditional Food Preparation"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+          <p className="video-caption">Traditional Kikuyu food preparation techniques and culinary practices passed down through generations.</p>
+        </div>
         <ul>
           <li><strong>Githeri:</strong> A nutritious staple mix of maize and beans, cooked together in a traditional pot (sufuria) and served at most meals.</li>
           <li><strong>Mukimo / Irio:</strong> Mukimo combines mashed potatoes, maize, and pumpkin (or nettle) leaves. Irio contains the same ingredients minus the greens.</li>
@@ -87,18 +106,23 @@ export default function Kikuyu() {
         </div>
       </MorphingCard>
 
-      <MorphingCard icon="🎉" title="Marriage & Festivals">
+      <MorphingCard 
+        icon="🎉" 
+        title="Marriage & Festivals"
+        backgroundImage="/assets/images/Kikuyu_marriage1.png"
+      >
         <p>
           <strong>Nguracio (Marriage):</strong> Traditional marriages involve elaborate dowry negotiations (Ruracio) requiring livestock (often dozens of goats and sheep) and symbolic rituals including planting a branch (kuhanda ithigi), shoulder-cutting ceremonies, ear-eating (kuria matu), and sharing ritual porridge (gukundania ucuru).
         </p>
         <div className="iframe-container">
           <iframe
-            src="https://www.youtube.com/embed/kR68DDjrkYc?si=8o9AOkf9m8ubV4TR"
-            title="Kikuyu Marriage Ceremony"
+            src="https://www.youtube.com/embed/jUeuMaEISG4"
+            title="Kikuyu Ruracio Ceremony"
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
           ></iframe>
+          <p className="video-caption">Traditional Kikuyu Ruracio (dowry) ceremony showcasing cultural marriage customs and family negotiations.</p>
         </div>
         <p>
           <strong>Ceremonial Gatherings:</strong> Marriage ceremonies feature ritual acts, community gatherings, and traditional performances that strengthen family alliances and cultural continuity.
@@ -121,7 +145,11 @@ export default function Kikuyu() {
         </div>
       </MorphingCard>
 
-      <MorphingCard icon="💼" title="Economic Practices">
+      <MorphingCard 
+        icon="💼" 
+        title="Economic Practices"
+        backgroundImage="/assets/images/Hives.png"
+      >
         <p>
           The Kikuyu economy traditionally centers around agriculture, complemented by livestock keeping and specialized crafts.
         </p>
@@ -133,10 +161,24 @@ export default function Kikuyu() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🪘" title="Music & Oral Traditions">
+      <MorphingCard 
+        icon="🪘" 
+        title="Music & Oral Traditions"
+        backgroundImage="/assets/images/Kikuyu_men.png"
+      >
         <p>
           <strong>Musical Heritage:</strong> Drums, flutes, and horns guide traditional songs and dances during harvest celebrations, weddings, and initiation ceremonies. Music serves as both entertainment and cultural education.
         </p>
+        <div className="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/cPm1xgVGOF4"
+            title="Kikuyu Folk Songs"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+          <p className="video-caption">Traditional Kikuyu folk songs and musical performances preserving cultural heritage through melody and rhythm.</p>
+        </div>
         <p>
           <strong>Oral Literature:</strong> The Kikuyu language preserves wisdom through proverbs and folktales passed down by elders. Stories teach moral lessons, bravery, and respect for community values.
         </p>
@@ -148,7 +190,11 @@ export default function Kikuyu() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="🧥" title="Traditional Attire">
+      <MorphingCard 
+        icon="🧥" 
+        title="Traditional Attire"
+        backgroundImage="/assets/images/Kikuyu_women.png"
+      >
         <p>
           Kikuyu traditional clothing reflects their cultural identity and varies by gender, age, and ceremonial occasion.
         </p>
@@ -176,7 +222,11 @@ export default function Kikuyu() {
         </div>
       </MorphingCard>
 
-      <MorphingCard icon="🕊️" title="Beliefs & Spirituality">
+      <MorphingCard 
+        icon="🕊️" 
+        title="Beliefs & Spirituality"
+        backgroundImage="/assets/images/KikuyuGeo.png"
+      >
         <p>
           <strong>Supreme Deity:</strong> The Kikuyu worship Ngai, the creator deity believed to dwell on Mount Kenya. Ngai governs all aspects of life and provides protection and guidance to the community.
         </p>
@@ -204,10 +254,10 @@ export default function Kikuyu() {
             className="styled-image"
           />
           <p className="image-caption">The fertile highlands around Mount Kenya - traditional Kikuyu homeland.</p>
-        </div>
-      </MorphingCard>
+        </div>      </MorphingCard>
+      </div>
 
-      <audio 
+      <audio
         ref={audioRef}
         loop 
         preload="auto"

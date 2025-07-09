@@ -7,7 +7,12 @@ export default function Nyamwezi() {
     <section className="section fade-in tribe-nyamwezi">
       <h2>Nyamwezi Tribe (Tanzania)</h2>
 
-      <MorphingCard icon="💍" title="Marriage & Family Structure">
+      <div className="morph-cards-container">
+      <MorphingCard 
+        icon="💍" 
+        title="Marriage & Family Structure"
+        backgroundImage="/assets/images/sukuma_men.png"
+      >
         <p>
           <strong>Courtship and Marriage:</strong> Traditional courtship involves extensive bridewealth negotiations between families, followed by multi-day celebrations that showcase the community's unity and cultural richness.
         </p>
@@ -19,7 +24,11 @@ export default function Nyamwezi() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="🍲" title="Traditional Foods">
+      <MorphingCard 
+        icon="🍲" 
+        title="Traditional Foods"
+        backgroundImage="/assets/images/Sukuma_food.png"
+      >
         <p>
           The Nyamwezi diet reflects their agricultural lifestyle and trading connections with other East African communities.
         </p>
@@ -31,7 +40,11 @@ export default function Nyamwezi() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="💰" title="Economic Practices">
+      <MorphingCard 
+        icon="💰" 
+        title="Economic Practices"
+        backgroundImage="/assets/images/EastAfrica.png"
+      >
         <p>
           The Nyamwezi developed sophisticated economic systems that made them influential traders in 19th-century East Africa.
         </p>
@@ -43,7 +56,11 @@ export default function Nyamwezi() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🎶" title="Music & Dance">
+      <MorphingCard 
+        icon="🎶" 
+        title="Music & Dance"
+        backgroundImage="/assets/images/Sukuma_women.png"
+      >
         <p>
           <strong>Hiari ya Moyo ("Desire of the Heart"):</strong> A renowned cultural troupe founded in 1953 in Tabora that showcases Nyamwezi heritage through vibrant group dance, complex rhythmic patterns, and traditional attire that tells stories of their history and values.
         </p>
@@ -60,7 +77,11 @@ export default function Nyamwezi() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="👗" title="Traditional Attire">
+      <MorphingCard 
+        icon="👗" 
+        title="Traditional Attire"
+        backgroundImage="/assets/images/sukuma_men.png"
+      >
         <p>
           Nyamwezi clothing has evolved over time while maintaining cultural significance and identity markers.
         </p>
@@ -72,7 +93,11 @@ export default function Nyamwezi() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🙏" title="Beliefs & Spirituality">
+      <MorphingCard 
+        icon="🙏" 
+        title="Beliefs & Spirituality"
+        backgroundImage="/assets/images/Sukuma_women.png"
+      >
         <p>
           <strong>Supreme Deity:</strong> The Nyamwezi honor Likube (God) as the supreme creator and source of all life, while maintaining deep connections to ancestral spirits who guide daily life.
         </p>
@@ -85,7 +110,11 @@ export default function Nyamwezi() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🗺️" title="Geography & Cultural Legacy">
+      <MorphingCard 
+        icon="🗺️" 
+        title="Geography & Cultural Legacy"
+        backgroundImage="/assets/images/EastAfrica.png"
+      >
         <p>
           <strong>Traditional Territory:</strong> The Nyamwezi occupy central Tanzania, with Tabora serving as a historical center of their culture and trade activities.
         </p>
@@ -96,6 +125,7 @@ export default function Nyamwezi() {
           <strong>Modern Presence:</strong> Today, Nyamwezi communities continue to preserve their cultural heritage while adapting to contemporary Tanzanian society and global influences.
         </p>
       </MorphingCard>
+      </div>
     </section>
   );
 }
