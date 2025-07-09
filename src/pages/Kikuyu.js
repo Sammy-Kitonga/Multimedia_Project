@@ -1,11 +1,37 @@
 import React from "react";
 import MorphingCard from "../components/MorphingCard";
+import AudioNotification from "../components/AudioNotification";
+import AudioControl from "../components/AudioControl";
+import useBackgroundAudio from "../hooks/useBackgroundAudio";
 import "../App.css";
 
 export default function Kikuyu() {
+  const { 
+    audioRef, 
+    audioBlocked, 
+    isPlaying, 
+    volume, 
+    manualPlay, 
+    togglePlayPause, 
+    changeVolume 
+  } = useBackgroundAudio("/assets/audio/Kikuyu.mp3", 0.3);
+
   return (
     <section className="section fade-in tribe-kikuyu">
       <h2>Kikuyu Tribe (Kenya)</h2>
+      
+      <AudioNotification 
+        isVisible={audioBlocked} 
+        onClick={manualPlay}
+      />
+
+      <AudioControl
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+        onToggle={togglePlayPause}
+        volume={volume}
+        onVolumeChange={changeVolume}
+      />
 
       <MorphingCard icon="📜" title="Key Cultural Practices">
         <p>
@@ -180,6 +206,16 @@ export default function Kikuyu() {
           <p className="image-caption">The fertile highlands around Mount Kenya - traditional Kikuyu homeland.</p>
         </div>
       </MorphingCard>
+
+      <audio 
+        ref={audioRef}
+        loop 
+        preload="auto"
+        style={{ display: 'none' }}
+      >
+        <source src="/assets/audio/Kikuyu.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
     </section>
   );
 }

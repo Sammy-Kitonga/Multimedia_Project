@@ -8,7 +8,6 @@ import Sukuma from "./pages/Sukuma";
 import Banyakole from "./pages/Banyakole";
 import Buganda from "./pages/Buganda";
 import Rwanda from "./pages/Rwanda";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "./App.css";
 
 function App() {

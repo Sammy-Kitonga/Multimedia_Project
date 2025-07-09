@@ -1,95 +1,37 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import MorphingCard from "../components/MorphingCard";
+import AudioNotification from "../components/AudioNotification";
+import AudioControl from "../components/AudioControl";
+import useBackgroundAudio from "../hooks/useBackgroundAudio";
 import "../App.css";
 
 export default function Kamba() {
-  const audioRef = useRef(null);
-  const [audioBlocked, setAudioBlocked] = useState(false);
-
-  useEffect(() => {
-    const attemptAutoplay = async () => {
-      const audio = audioRef.current;
-      if (audio) {
-        try {
-          // Set volume to a reasonable level
-          audio.volume = 0.3;
-          
-          // Try to play immediately
-          await audio.play();
-          console.log("Audio started successfully");
-          setAudioBlocked(false);
-        } catch (error) {
-          console.warn("Autoplay failed:", error);
-          setAudioBlocked(true);
-          
-          // Try alternative approaches
-          attemptDelayedPlay();
-        }
-      }
-    };
-
-    const attemptDelayedPlay = () => {
-      // Try again after a short delay
-      setTimeout(async () => {
-        try {
-          await audioRef.current?.play();
-          setAudioBlocked(false);
-        } catch (error) {
-          // Set up click listener as fallback
-          setupClickListener();
-        }
-      }, 100);
-    };
-
-    const setupClickListener = () => {
-      const handleFirstClick = async () => {
-        try {
-          await audioRef.current?.play();
-          setAudioBlocked(false);
-          document.removeEventListener('click', handleFirstClick);
-          document.removeEventListener('keydown', handleFirstClick);
-          document.removeEventListener('touchstart', handleFirstClick);
-        } catch (error) {
-          console.warn("Click-triggered play failed:", error);
-        }
-      };
-
-      document.addEventListener('click', handleFirstClick);
-      document.addEventListener('keydown', handleFirstClick);
-      document.addEventListener('touchstart', handleFirstClick);
-    };
-
-    // Start the autoplay attempt
-    attemptAutoplay();
-
-    // Cleanup function
-    return () => {
-      const audio = audioRef.current;
-      if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
-      }
-    };
-  }, []);
+  const { 
+    audioRef, 
+    audioBlocked, 
+    isPlaying, 
+    volume, 
+    manualPlay, 
+    togglePlayPause, 
+    changeVolume 
+  } = useBackgroundAudio("/assets/audio/Kamba_pewa.mp3", 0.3);
 
   return (
     <section className="section fade-in tribe-kamba">
       <h2>Kamba Tribe (Kenya)</h2>
       
-      {audioBlocked && (
-        <div style={{
-          background: '#fef3c7',
-          border: '1px solid #f59e0b',
-          borderRadius: '8px',
-          padding: '10px',
-          margin: '10px 0',
-          textAlign: 'center',
-          fontSize: '0.9rem',
-          color: '#92400e'
-        }}>
-          🎵 Background music is available - click anywhere to enable it
-        </div>
-      )}
+      <AudioNotification 
+        isVisible={audioBlocked} 
+        onClick={manualPlay}
+      />
+
+      <AudioControl
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+        onToggle={togglePlayPause}
+        volume={volume}
+        onVolumeChange={changeVolume}
+      />
 
       <MorphingCard icon="🍲" title="Traditional Foods">
         <p>
@@ -177,7 +119,7 @@ export default function Kamba() {
         preload="auto"
         style={{ display: 'none' }}
       >
-        <source src="/assets/audio/Kamba_Pewa.mp3" type="audio/mpeg" />
+        <source src="/assets/audio/Kamba_pewa.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </section>
