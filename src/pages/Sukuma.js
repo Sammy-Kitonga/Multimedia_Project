@@ -7,7 +7,12 @@ export default function Sukuma() {
     <section className="section fade-in tribe-sukuma">
       <h2>Sukuma Tribe (Tanzania)</h2>
 
-      <MorphingCard icon="📜" title="Key Cultural Practices">
+      <div className="morph-cards-container">
+      <MorphingCard 
+        icon="📜" 
+        title="Key Cultural Practices"
+        backgroundImage="/assets/images/sukuma_men.png"
+      >
         <p>
           <strong>Rites of Passage:</strong> Birth ceremonies mark earliest rituals for gender identity and community belonging. Unlike some cultures, the Sukuma have no formal age-set initiation into adulthood.
         </p>
@@ -22,7 +27,11 @@ export default function Sukuma() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="🍛" title="Traditional Foods">
+      <MorphingCard 
+        icon="🍛" 
+        title="Traditional Foods"
+        backgroundImage="/assets/images/Sukuma_food.png"
+      >
         <p>
           The Sukuma diet reflects their agricultural lifestyle and includes both cultivated crops and livestock products.
         </p>
@@ -42,7 +51,11 @@ export default function Sukuma() {
         </div>
       </MorphingCard>
 
-      <MorphingCard icon="🎶" title="Music & Dance">
+      <MorphingCard 
+        icon="🎶" 
+        title="Music & Dance"
+        backgroundImage="/assets/images/Sukuma_women.png"
+      >
         <p>
           <strong>Traditional Dance Forms:</strong> Bugobogobo, Bukomyalume, and Isesa dances are energetic, drum-driven performances showcasing traditional rhythm and elaborate attire. These vibrant cultural expressions feature ceremonial masks, community drumming, and competitive elements.
         </p>
@@ -72,7 +85,11 @@ export default function Sukuma() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="💼" title="Economic Practices">
+      <MorphingCard 
+        icon="💼" 
+        title="Economic Practices"
+        backgroundImage="/assets/images/sukuma_men.png"
+      >
         <p>
           The Sukuma economy combines agriculture, pastoralism, and traditional crafts, creating a diverse livelihood system.
         </p>
@@ -85,7 +102,11 @@ export default function Sukuma() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🧥" title="Traditional Attire">
+      <MorphingCard 
+        icon="🧥" 
+        title="Traditional Attire"
+        backgroundImage="/assets/images/Sukuma_women.png"
+      >
         <p>
           Sukuma clothing reflects their agricultural heritage and artistic traditions, especially during ceremonial occasions.
         </p>
@@ -112,7 +133,11 @@ export default function Sukuma() {
         </div>
       </MorphingCard>
 
-      <MorphingCard icon="🕊️" title="Beliefs & Spirituality">
+      <MorphingCard 
+        icon="🕊️" 
+        title="Beliefs & Spirituality"
+        backgroundImage="/assets/images/sukuma_men.png"
+      >
         <p>
           <strong>Ancestral Beliefs:</strong> Sukuma belief centers around ancestral spirits and nature. Sacred shrines are built near sacred trees or rocks for offerings and prayers, maintaining connection with spiritual forces.
         </p>
@@ -125,7 +150,11 @@ export default function Sukuma() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🗺️" title="Geography & Cultural Heritage">
+      <MorphingCard 
+        icon="🗺️" 
+        title="Geography & Cultural Heritage"
+        backgroundImage="/assets/images/EastAfrica.png"
+      >
         <p>
           <strong>Homeland:</strong> The Sukuma live in northwestern Tanzania, near Lake Victoria in Mwanza and Shinyanga regions. Their history traces back to migrations from northern Tanzania and Uganda.
         </p>
@@ -139,6 +168,7 @@ export default function Sukuma() {
           <strong>Modern Continuity:</strong> Traditional practices remain strong, especially in rural areas, while communities adapt to modern education, urbanization, and contemporary challenges.
         </p>
       </MorphingCard>
+      </div>
     </section>
   );
 }

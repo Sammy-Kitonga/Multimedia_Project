@@ -7,7 +7,12 @@ export default function Buganda() {
     <section className="section fade-in tribe-buganda">
       <h2>Buganda Tribe (Uganda)</h2>
 
-      <MorphingCard icon="📜" title="Key Cultural Practices">
+      <div className="morph-cards-container">
+      <MorphingCard 
+        icon="📜" 
+        title="Key Cultural Practices"
+        backgroundImage="/assets/images/Buganda_men.png"
+      >
         <p>
           <strong>Rites of Passage:</strong> Bark cloth for newborns, circumcision in some clans, ancestral prayers during death.
         </p>
@@ -25,7 +30,11 @@ export default function Buganda() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="👗" title="Traditional Attire">
+      <MorphingCard 
+        icon="👗" 
+        title="Traditional Attire"
+        backgroundImage="/assets/images/Buganda_women.png"
+      >
         <p>
           <strong>Men:</strong> Kanzu (white robe).
         </p>
@@ -56,10 +65,24 @@ export default function Buganda() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="🍲" title="Traditional Foods">
+      <MorphingCard 
+        icon="🍲" 
+        title="Traditional Foods"
+        backgroundImage="/assets/images/Matoke.png"
+      >
         <p>
           <strong>Staples:</strong> Matoke, groundnut sauce, sweet potatoes, yams.
         </p>
+        <div className="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/nchm_zmkL0E"
+            title="Traditional Baganda Food"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+          <p className="video-caption">Traditional Baganda food preparation and culinary practices, featuring signature dishes and cooking methods.</p>
+        </div>
         <p>
           <strong>Methods:</strong> Steaming in banana leaves ("Luwombo"), open-fire cooking.
         </p>
@@ -68,7 +91,11 @@ export default function Buganda() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="💼" title="Economic Practices">
+      <MorphingCard 
+        icon="💼" 
+        title="Economic Practices"
+        backgroundImage="/assets/images/Matoke1.png"
+      >
         <p>
           <strong>Farming:</strong> Bananas, coffee, yams.
         </p>
@@ -80,10 +107,23 @@ export default function Buganda() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="🎶" title="Language, Music & Oral Traditions">
+      <MorphingCard 
+        icon="🎶" 
+        title="Language, Music & Oral Traditions"
+        backgroundImage="/assets/images/Buganda_men.png"
+      >
         <p>
           <strong>Language:</strong> Luganda.
         </p>
+        <div className="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/jmWJR7g9Tts"
+            title="Traditional Baganda Dance"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        </div>
         <p>
           <strong>Music & Dance:</strong> Baakisimba dance, royal drumming.
         </p>
@@ -95,7 +135,11 @@ export default function Buganda() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="🙏" title="Beliefs & Spirituality">
+      <MorphingCard 
+        icon="🙏" 
+        title="Beliefs & Spirituality"
+        backgroundImage="/assets/images/Buganda_women.png"
+      >
         <p>
           <strong>Beliefs:</strong> Worship of Katonda (supreme God) and balubaale (spirits).
         </p>
@@ -107,7 +151,11 @@ export default function Buganda() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="🗺️" title="Geographical Location">
+      <MorphingCard 
+        icon="🗺️" 
+        title="Geographical Location"
+        backgroundImage="/assets/images/EastAfrica.png"
+      >
         <p>
           <strong>Homeland:</strong> Central Uganda (Buganda Kingdom).
         </p>
@@ -119,7 +167,11 @@ export default function Buganda() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="📚" title="Modern Influence">
+      <MorphingCard 
+        icon="📚" 
+        title="Modern Influence"
+        backgroundImage="/assets/images/Buganda_men.png"
+      >
         <p>
           <strong>Colonization:</strong> Cooperation with British (1900 Agreement); Kabaka retained symbolic power.
         </p>
@@ -130,6 +182,7 @@ export default function Buganda() {
           <strong>Preservation:</strong> Clan associations, Buganda parliament (Lukiiko), cultural museums.
         </p>
       </MorphingCard>
+      </div>
     </section>
   );
 }

@@ -1,97 +1,43 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import MorphingCard from "../components/MorphingCard";
+import AudioNotification from "../components/AudioNotification";
+import AudioControl from "../components/AudioControl";
+import useBackgroundAudio from "../hooks/useBackgroundAudio";
 import "../App.css";
 
 export default function Kamba() {
-  const audioRef = useRef(null);
-  const [audioBlocked, setAudioBlocked] = useState(false);
-
-  useEffect(() => {
-    const attemptAutoplay = async () => {
-      const audio = audioRef.current;
-      if (audio) {
-        try {
-          // Set volume to a reasonable level
-          audio.volume = 0.3;
-          
-          // Try to play immediately
-          await audio.play();
-          console.log("Audio started successfully");
-          setAudioBlocked(false);
-        } catch (error) {
-          console.warn("Autoplay failed:", error);
-          setAudioBlocked(true);
-          
-          // Try alternative approaches
-          attemptDelayedPlay();
-        }
-      }
-    };
-
-    const attemptDelayedPlay = () => {
-      // Try again after a short delay
-      setTimeout(async () => {
-        try {
-          await audioRef.current?.play();
-          setAudioBlocked(false);
-        } catch (error) {
-          // Set up click listener as fallback
-          setupClickListener();
-        }
-      }, 100);
-    };
-
-    const setupClickListener = () => {
-      const handleFirstClick = async () => {
-        try {
-          await audioRef.current?.play();
-          setAudioBlocked(false);
-          document.removeEventListener('click', handleFirstClick);
-          document.removeEventListener('keydown', handleFirstClick);
-          document.removeEventListener('touchstart', handleFirstClick);
-        } catch (error) {
-          console.warn("Click-triggered play failed:", error);
-        }
-      };
-
-      document.addEventListener('click', handleFirstClick);
-      document.addEventListener('keydown', handleFirstClick);
-      document.addEventListener('touchstart', handleFirstClick);
-    };
-
-    // Start the autoplay attempt
-    attemptAutoplay();
-
-    // Cleanup function
-    return () => {
-      const audio = audioRef.current;
-      if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
-      }
-    };
-  }, []);
+  const { 
+    audioRef, 
+    audioBlocked, 
+    isPlaying, 
+    volume, 
+    manualPlay, 
+    togglePlayPause, 
+    changeVolume 
+  } = useBackgroundAudio("/assets/audio/Kamba_pewa.mp3", 0.3);
 
   return (
     <section className="section fade-in tribe-kamba">
       <h2>Kamba Tribe (Kenya)</h2>
       
-      {audioBlocked && (
-        <div style={{
-          background: '#fef3c7',
-          border: '1px solid #f59e0b',
-          borderRadius: '8px',
-          padding: '10px',
-          margin: '10px 0',
-          textAlign: 'center',
-          fontSize: '0.9rem',
-          color: '#92400e'
-        }}>
-          🎵 Background music is available - click anywhere to enable it
-        </div>
-      )}
+      <div className="morph-cards-container">
+      <AudioNotification 
+        isVisible={audioBlocked} 
+        onClick={manualPlay}
+      />
 
-      <MorphingCard icon="🍲" title="Traditional Foods">
+      <AudioControl
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+        onToggle={togglePlayPause}
+        volume={volume}
+        onVolumeChange={changeVolume}
+      />
+      <MorphingCard 
+        icon="🍲" 
+        title="Traditional Foods"
+        backgroundImage="/assets/images/muthokoi1.png"
+      >
         <p>
           <strong>Muthokoi:</strong> Muthokoi is the most common dish eaten by the Kamba. It consists of dehulled maize kernels cooked with pigeon peas (mbaazi), onions, tomatoes, and salt. Traditionally prepared over fire in clay pots or metal pans.
         </p>
@@ -119,18 +65,46 @@ export default function Kamba() {
           />
           <p>Traditional preparation of Muthokoi</p>
         </div>
+        <div className="video-container">
+          <video 
+            controls 
+            width="100%" 
+            style={{ maxWidth: '800px', borderRadius: '10px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}
+          >
+            <source src="/assets/video/Kamba%20Interview.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p className="video-caption">Kamba Cultural Interview - Traditional practices and food preparation insights.</p>
+        </div>
       </MorphingCard>
 
-      <MorphingCard icon="💍" title="Marriage & Cultural Practices">
+      <MorphingCard 
+        icon="💍" 
+        title="Marriage & Cultural Practices"
+        backgroundImage="/assets/images/Muthokoi2.png"
+      >
         <p>
           <strong>Ntheo Marriage Rite:</strong> One of the central customs is Ntheo, where the groom's family slaughters an animal at the bride's home. This ritual symbolizes a covenant between the two families and formally seals the marriage agreement.
         </p>
+        <div className="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/IgYsWBBY-5s"
+            title="Ntheo Marriage Rite"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        </div>
         <p>
           <strong>Spiritual Beliefs:</strong> Kamba elders honor ancestors by pouring a small amount of traditional beer on the ground while invoking their names (e.g. "akundie vau") before communal drinking. This shows respect and spiritual connection with the departed.
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="👗" title="Traditional Attire">
+      <MorphingCard 
+        icon="👗" 
+        title="Traditional Attire"
+        backgroundImage="/assets/images/Kikuyu_women.png"
+      >
         <p>
           Traditional Kamba attire reflects their cultural heritage and remains an important part of ceremonial occasions.
         </p>
@@ -139,9 +113,29 @@ export default function Kamba() {
           <li><strong>Men:</strong> Leather kilts with brass and iron adornments. These metals signify status and craftsmanship.</li>
           <li><strong>Modern Usage:</strong> Traditional dress is still worn in ceremonies, and beadwork remains popular in crafts and trade.</li>
         </ul>
+        <div className="image-container">
+          <img
+            src="/assets/images/Kamba%20women%20attire.jpeg"
+            alt="Kamba women traditional attire"
+            className="styled-image"
+          />
+          <p className="image-caption">Traditional Kamba women's attire featuring intricate beadwork and leather garments.</p>
+        </div>
+        <div className="image-container">
+          <img
+            src="/assets/images/Kamba%20Men%20attire.jpeg"
+            alt="Kamba men traditional attire"
+            className="styled-image"
+          />
+          <p className="image-caption">Traditional Kamba men's clothing with leather kilts and metal adornments.</p>
+        </div>
       </MorphingCard>
 
-      <MorphingCard icon="🎶" title="Music & Dance">
+      <MorphingCard 
+        icon="🎶" 
+        title="Music & Dance"
+        backgroundImage="/assets/images/Kikuyu_men.png"
+      >
         <p>
           <strong>Kilumi dance:</strong> A spiritual rainmaking and celebratory dance led by women in metallic-accented attire. Men drum as women chant and dance rhythmically.
         </p>
@@ -155,7 +149,11 @@ export default function Kamba() {
           ></iframe>
         </div>
       </MorphingCard>
-      <MorphingCard icon="💼" title="Economic Practices">
+      <MorphingCard 
+        icon="💼" 
+        title="Economic Practices"
+        backgroundImage="/assets/images/Hives.png"
+      >
         
         <ul>
           <li><strong>Farming:</strong> Farming of cereals such as maize and millet and legumes such as beans.</li>
@@ -170,6 +168,7 @@ export default function Kamba() {
           <p className="image-caption">Traditional bee hives made from hollowed out tree logs</p>
         </div>
       </MorphingCard>
+      </div>
 
       <audio 
         ref={audioRef}
@@ -177,7 +176,7 @@ export default function Kamba() {
         preload="auto"
         style={{ display: 'none' }}
       >
-        <source src="/assets/audio/Kamba_Pewa.mp3" type="audio/mpeg" />
+        <source src="/assets/audio/Kamba_pewa.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </section>

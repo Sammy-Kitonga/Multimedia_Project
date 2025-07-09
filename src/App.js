@@ -8,7 +8,6 @@ import Sukuma from "./pages/Sukuma";
 import Banyakole from "./pages/Banyakole";
 import Buganda from "./pages/Buganda";
 import Rwanda from "./pages/Rwanda";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "./App.css";
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
   return (
     <div className="container">
       <header className="header fade-in">
-        <h1>Traditional Cultures of East Africa</h1>
+        <h1>Ubuntu Heritage</h1>
       </header>
 
       {location.pathname !== "/" && (

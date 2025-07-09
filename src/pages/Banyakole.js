@@ -7,7 +7,12 @@ export default function Banyakole() {
     <section className="section fade-in tribe-banyakole">
       <h2>Banyakole Tribe (Uganda)</h2>
 
-      <MorphingCard icon="📜" title="Key Cultural Practices">
+      <div className="morph-cards-container">
+        <MorphingCard 
+        icon="📜" 
+        title="Key Cultural Practices"
+        backgroundImage="/assets/images/Banyakolemen.png"
+      >
         <p>
           <strong>Rites of Passage:</strong> Birth rituals involve presenting gifts to the mother and child. Boys were initiated into manhood through cattle-keeping responsibilities rather than formal circumcision, learning milking and grazing responsibilities.
         </p>
@@ -25,7 +30,11 @@ export default function Banyakole() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="👗" title="Traditional Attire">
+      <MorphingCard 
+        icon="👗" 
+        title="Traditional Attire"
+        backgroundImage="/assets/images/Banyakolewomen.png"
+      >
         <p>
           Traditional Banyakole clothing reflects their cattle-keeping culture and emphasizes status through materials.
         </p>
@@ -36,14 +45,6 @@ export default function Banyakole() {
           <li><strong>Ceremonial Wear:</strong> Elaborate beaded ornaments during marriage and royal ceremonies, signifying wealth and status.</li>
           <li><strong>Cultural Meaning:</strong> Skins symbolized wealth (cattle), while beads often indicated social status and ceremonial importance.</li>
         </ul>
-        <div className="image-container">
-          <img
-            src="/assets/images/Banyakole_milk.png"
-            alt="Banyakole milk preparation"
-            className="styled-image"
-          />
-          <p className="image-caption">Traditional milk preparation - central to Banyakole culture.</p>
-        </div>
         <div className="image-container">
           <img
             src="/assets/images/Banyakolemen.png"
@@ -62,10 +63,22 @@ export default function Banyakole() {
         </div>
       </MorphingCard>
 
-      <MorphingCard icon="🍲" title="Traditional Foods & Preparation">
+      <MorphingCard 
+        icon="🍲" 
+        title="Traditional Foods & Preparation"
+        backgroundImage="/assets/images/Banyakole_milk.png"
+      >
         <p>
           The Banyakole diet centers around dairy products, reflecting their pastoral lifestyle and deep connection to cattle.
         </p>
+        <div className="image-container">
+          <img
+            src="/assets/images/Banyakole_milk.png"
+            alt="Banyakole milk preparation"
+            className="styled-image"
+          />
+          <p className="image-caption">Traditional milk preparation - central to Banyakole culture.</p>
+        </div>
         <ul>
           <li><strong>Milk (amate):</strong> Fresh milk is the cornerstone of Banyakole nutrition and cultural practices.</li>
           <li><strong>Millet bread (karo):</strong> Traditional bread made from millet, a staple grain in their diet.</li>
@@ -105,7 +118,11 @@ export default function Banyakole() {
         </div>
       </MorphingCard>
 
-      <MorphingCard icon="�" title="Economic Practices">
+      <MorphingCard 
+        icon="🏭" 
+        title="Economic Practices"
+        backgroundImage="/assets/images/Banyakolemen.png"
+      >
         <p>
           The Banyakole economy is traditionally centered around cattle keeping, with complementary agricultural activities.
         </p>
@@ -121,10 +138,23 @@ export default function Banyakole() {
         </p>
       </MorphingCard>
 
-      <MorphingCard icon="🎵" title="Language, Music & Oral Traditions">
+      <MorphingCard 
+        icon="🎵" 
+        title="Language, Music & Oral Traditions"
+        backgroundImage="/assets/images/Banyakolewomen.png"
+      >
         <p>
           <strong>Language:</strong> Runyankore, which preserves cultural knowledge and traditional practices through oral transmission.
         </p>
+        <div className="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/1YfcfL5HpSU"
+            title="Traditional Banyakole Dance"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        </div>
         <ul>
           <li><strong>Proverbs & Folktales:</strong> Rich oral literature emphasizing cattle, respect for elders, and community wisdom.</li>
           <li><strong>Music & Dance:</strong> Ekizino/Ekitaguro dance performed during weddings and celebrations, featuring rhythmic movements and community participation.</li>
@@ -134,7 +164,11 @@ export default function Banyakole() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🙏" title="Beliefs & Spirituality">
+      <MorphingCard 
+        icon="🙏" 
+        title="Beliefs & Spirituality"
+        backgroundImage="/assets/images/Banyakole_milk.png"
+      >
         <p>
           Banyakole spiritual practices center around cattle, ancestors, and natural forces that affect their pastoral lifestyle.
         </p>
@@ -147,7 +181,11 @@ export default function Banyakole() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🗺️" title="Geographical Location & Modern Influence">
+      <MorphingCard 
+        icon="🗺️" 
+        title="Geographical Location & Modern Influence"
+        backgroundImage="/assets/images/EastAfrica.png"
+      >
         <p>
           <strong>Traditional Homeland:</strong> South-western Uganda in the Ankole region, an area well-suited for cattle keeping.
         </p>
@@ -167,6 +205,7 @@ export default function Banyakole() {
           <li><strong>Cultural Preservation:</strong> Modern efforts include cultural festivals, traditional milk processing rituals, and maintaining cattle-keeping traditions.</li>
         </ul>
       </MorphingCard>
+      </div>
     </section>
   );
 }
