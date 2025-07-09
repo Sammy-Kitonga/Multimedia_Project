@@ -4,7 +4,7 @@ import "../App.css";
 
 export default function Sukuma() {
   return (
-    <section className="section fade-in tribe-chagga">
+    <section className="section fade-in tribe-sukuma">
       <h2>Sukuma Tribe (Tanzania)</h2>
 
       <MorphingCard icon="🍛" title="Traditional Foods">
@@ -13,6 +13,14 @@ export default function Sukuma() {
           <li><strong>Staples:</strong> Millet, cassava, sorghum, rice, sweet potatoes, peanuts.</li>
           <li><strong>Livestock:</strong> Meat and dairy from cattle, goats, poultry.</li>
         </ul>
+        <div className="image-container">
+          <img
+            src="/assets/images/Sukuma_food.png"
+            alt="Sukuma traditional food"
+            className="styled-image"
+          />
+          <p className="image-caption">A traditional Sukuma meal featuring ugali and greens.</p>
+        </div>
       </MorphingCard>
 
       <MorphingCard icon="🎶" title="Music & Dance">
@@ -35,6 +43,7 @@ export default function Sukuma() {
             allowFullScreen
           ></iframe>
         </div>
+        
       </MorphingCard>
 
       <MorphingCard icon="💼" title="Economic Practices">
@@ -43,6 +52,7 @@ export default function Sukuma() {
           <li>Cattle herding; fishing near Lake Victoria.</li>
           <li>Crafts: Pottery, weaving, ironwork, drum-making.</li>
         </ul>
+        
       </MorphingCard>
 
       <MorphingCard icon="🧥" title="Traditional Attire">
@@ -50,6 +60,22 @@ export default function Sukuma() {
           <li><strong>Women:</strong> Kangas, beads, body paint during ceremonies.</li>
           <li><strong>Men:</strong> Shukas and kanzus; beadwork and animal skins for status.</li>
         </ul>
+        <div className="image-container">
+          <img
+            src="/assets/images/Sukuma_women.png"
+            alt="Sukuma traditional attire"
+            className="styled-image"
+          />
+          <p className="image-caption">Sukuma women attire.</p>
+        </div>
+        <div className="image-container">
+          <img
+            src="/assets/images/sukuma_men.png"
+            alt="Sukuma traditional attire"
+            className="styled-image"
+          />
+          <p className="image-caption">Sukuma men attire.</p>
+        </div>
       </MorphingCard>
 
       <MorphingCard icon="🕊️" title="Beliefs & Spirituality">

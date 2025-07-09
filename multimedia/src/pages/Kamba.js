@@ -95,6 +95,14 @@ export default function Kamba() {
         <p>
           <strong>Muthokoi:</strong> Muthokoi is the most common dish eaten by the Kamba. It consists of dehulled maize kernels cooked with pigeon peas (mbaazi), onions, tomatoes, and salt. Traditionally prepared over fire in clay pots or metal pans.
         </p>
+        <div className="image-container">
+          <img
+            src="/assets/images/Muthokoi2.png"
+            alt=""
+            className="styled-image"
+          />
+          <p>Muthokoi</p>
+        </div>
       </MorphingCard>
 
       <MorphingCard icon="🎶" title="Music & Dance">
@@ -109,6 +117,21 @@ export default function Kamba() {
             allow="autoplay; encrypted-media"
             allowFullScreen
           ></iframe>
+        </div>
+      </MorphingCard>
+      <MorphingCard icon="💼" title="Economic Practices">
+        
+        <ul>
+          <li><strong>Farming:</strong> Farming of cereals such as maize and millet and legumes such as beans.</li>
+          <li><strong>Beekeeping:</strong> Traditional bee hives are created by hollowing tree logs and hanging them on trees.</li>
+        </ul>
+        <div className="image-container">
+          <img
+            src="/assets/images/Hives.png"
+            alt="Kamba beekeeping"
+            className="styled-image"
+          />
+          <p className="image-caption">Traditional bee hives made from hollowed out tree logs</p>
         </div>
       </MorphingCard>
 
