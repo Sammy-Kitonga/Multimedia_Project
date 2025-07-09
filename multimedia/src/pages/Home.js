@@ -114,15 +114,9 @@ export default function Home() {
               <>
                 <div
                   className="tribe-option"
-                  onClick={() => handleTribeSelection("hutu")}
+                  onClick={() => handleTribeSelection("rwanda")}
                 >
-                  Hutu
-                </div>
-                <div
-                  className="tribe-option"
-                  onClick={() => handleTribeSelection("tutsi")}
-                >
-                  Tutsi
+                  Rwandan Culture
                 </div>
               </>
             )}
@@ -132,11 +126,11 @@ export default function Home() {
       )}
 
       <p>
-        East Africa is home to some of the most vibrant, diverse, and culturally rich communities on the continent. From the pastoral rhythms of the Kamba, to the royal heritage of the Buganda, the highland farming of the Sukuma, and the agricultural traditions of the Hutu alongside the aristocratic culture of the Tutsi, every tribe carries generations of wisdom, art, and identity.
+        East Africa is home to some of the most vibrant, diverse, and culturally rich communities on the continent. From the pastoral rhythms of the Kamba, to the royal heritage of the Buganda, the highland farming of the Sukuma, and the unified cultural heritage of Rwanda, every community carries generations of wisdom, art, and identity.
       </p>
 
       <p>
-        This project highlights eight of East Africa's traditional tribes — each with unique practices in food, dance, beliefs, and craftsmanship. Through detailed cultural information and historical context, we invite you to experience the traditions that continue to shape daily life across Kenya, Uganda, Tanzania, and Rwanda.
+        This project highlights seven of East Africa's traditional cultures — each with unique practices in food, dance, beliefs, and craftsmanship. Through detailed cultural information and historical context, we invite you to experience the traditions that continue to shape daily life across Kenya, Uganda, Tanzania, and Rwanda.
       </p>
 
       <p className="signature">
