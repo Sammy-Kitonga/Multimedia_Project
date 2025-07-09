@@ -77,6 +77,13 @@
     height: 230px;
   }
 
+  .rwanda-region {
+    top: 40.6%; 
+    left: 19.9%; 
+    width: 80px;
+    height: 80px;
+  }
+
   .country-modal {
     position: fixed;
     top: 50%;
