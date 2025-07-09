@@ -48,6 +48,14 @@ export default function Nyamwezi() {
         <p>
           The Nyamwezi developed sophisticated economic systems that made them influential traders in 19th-century East Africa.
         </p>
+        <div className="image-container">
+          <img
+            src="/assets/images/Nyamwezi%20Ivory%20Trade.jpeg"
+            alt="Nyamwezi ivory trade caravan"
+            className="styled-image"
+          />
+          <p className="image-caption">Historic Nyamwezi ivory trade caravan, a key part of their economic and cultural legacy.</p>
+        </div>
         <ul>
           <li><strong>Ivory Trade and Elephant Hunting:</strong> The Nyamwezi organized sacred hunting guilds and developed expertise in elephant hunting, trading tusks regionally for manufactured goods, weapons, and other valuable items.</li>
           <li><strong>Long-Distance Trade Networks:</strong> Served as caravan porters and middlemen in the 19th-century East African trade networks, connecting the interior with coastal markets.</li>
@@ -85,6 +93,14 @@ export default function Nyamwezi() {
         <p>
           Nyamwezi clothing has evolved over time while maintaining cultural significance and identity markers.
         </p>
+        <div className="image-container">
+          <img
+            src="/assets/images/Nyamwezi%20men.jpeg"
+            alt="Nyamwezi men in traditional attire"
+            className="styled-image"
+          />
+          <p className="image-caption">Nyamwezi men in traditional kanzu robes and ceremonial attire.</p>
+        </div>
         <ul>
           <li><strong>Women's Historical Attire:</strong> Traditionally wore bark cloth garments crafted from local tree bark, demonstrating sophisticated textile techniques.</li>
           <li><strong>Modern Women's Clothing:</strong> Adopted colorful khangas and vitenge fabrics featuring traditional proverbs and cultural symbols that convey messages and values.</li>
