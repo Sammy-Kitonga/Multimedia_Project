@@ -164,6 +164,16 @@ body {
   border-left: 5px solid #0e7490;
 }
 
+.tribe-hutu {
+  background-color: #f9fdf4;
+  border-left: 5px solid #16a34a;
+}
+
+.tribe-tutsi {
+  background-color: #fef7ff;
+  border-left: 5px solid #9333ea;
+}
+
 .nav-home{
   background-color:#1d4ed8 ;
 }
@@ -211,6 +221,20 @@ body {
 }
 .nav-buganda:hover { 
   background-color: #6366f1; 
+}
+
+.nav-hutu { 
+  background-color: #16a34a; 
+}
+.nav-hutu:hover { 
+  background-color: #22c55e; 
+}
+
+.nav-tutsi { 
+  background-color: #9333ea; 
+}
+.nav-tutsi:hover { 
+  background-color: #a855f7; 
 }
 
 

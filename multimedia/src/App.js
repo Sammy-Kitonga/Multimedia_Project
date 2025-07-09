@@ -7,6 +7,8 @@ import Kikuyu from "./pages/Kikuyu";
 import Sukuma from "./pages/Sukuma";
 import Banyakole from "./pages/Banyakole";
 import Buganda from "./pages/Buganda";
+import Hutu from "./pages/Hutu";
+import Tutsi from "./pages/Tutsi";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "./App.css";
 
@@ -28,6 +30,8 @@ function App() {
           <Link className="nav-chagga" to="/sukuma">Sukuma</Link>
           <Link className="nav-banyakole" to="/banyakole">Banyakole</Link>
           <Link className="nav-buganda" to="/buganda">Buganda</Link>
+          <Link className="nav-hutu" to="/hutu">Hutu</Link>
+          <Link className="nav-tutsi" to="/tutsi">Tutsi</Link>
         </nav>
       )}
 
@@ -39,6 +43,8 @@ function App() {
         <Route path="/sukuma" element={<Sukuma />} />
         <Route path="/banyakole" element={<Banyakole />} />
         <Route path="/buganda" element={<Buganda />} />
+        <Route path="/hutu" element={<Hutu />} />
+        <Route path="/tutsi" element={<Tutsi />} />
       </Routes>
 
       <footer className="footer">
