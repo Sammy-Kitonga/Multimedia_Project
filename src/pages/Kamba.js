@@ -95,14 +95,50 @@ export default function Kamba() {
         <p>
           <strong>Muthokoi:</strong> Muthokoi is the most common dish eaten by the Kamba. It consists of dehulled maize kernels cooked with pigeon peas (mbaazi), onions, tomatoes, and salt. Traditionally prepared over fire in clay pots or metal pans.
         </p>
+        <p><strong>Ingredients for Traditional Muthokoi:</strong></p>
+        <ul>
+          <li>2 cups dehulled maize</li>
+          <li>1½ cups pigeon peas</li>
+          <li>1 large onion</li>
+          <li>2 chopped tomatoes</li>
+          <li>Salt and water to boil until soft</li>
+        </ul>
         <div className="image-container">
           <img
             src="/assets/images/Muthokoi2.png"
-            alt=""
+            alt="Muthokoi dish"
             className="styled-image"
           />
-          <p>Muthokoi</p>
+          <p>Muthokoi - the staple dish of the Kamba people</p>
         </div>
+        <div className="image-container">
+          <img
+            src="/assets/images/muthokoi1.png"
+            alt="Muthokoi preparation"
+            className="styled-image"
+          />
+          <p>Traditional preparation of Muthokoi</p>
+        </div>
+      </MorphingCard>
+
+      <MorphingCard icon="💍" title="Marriage & Cultural Practices">
+        <p>
+          <strong>Ntheo Marriage Rite:</strong> One of the central customs is Ntheo, where the groom's family slaughters an animal at the bride's home. This ritual symbolizes a covenant between the two families and formally seals the marriage agreement.
+        </p>
+        <p>
+          <strong>Spiritual Beliefs:</strong> Kamba elders honor ancestors by pouring a small amount of traditional beer on the ground while invoking their names (e.g. "akundie vau") before communal drinking. This shows respect and spiritual connection with the departed.
+        </p>
+      </MorphingCard>
+
+      <MorphingCard icon="👗" title="Traditional Attire">
+        <p>
+          Traditional Kamba attire reflects their cultural heritage and remains an important part of ceremonial occasions.
+        </p>
+        <ul>
+          <li><strong>Women:</strong> Beaded headbands, necklaces, and leather skirts. Intricate beadwork is a hallmark of Kamba women's traditional dress.</li>
+          <li><strong>Men:</strong> Leather kilts with brass and iron adornments. These metals signify status and craftsmanship.</li>
+          <li><strong>Modern Usage:</strong> Traditional dress is still worn in ceremonies, and beadwork remains popular in crafts and trade.</li>
+        </ul>
       </MorphingCard>
 
       <MorphingCard icon="🎶" title="Music & Dance">
