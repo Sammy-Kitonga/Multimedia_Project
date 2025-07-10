@@ -1,5 +1,6 @@
 import React from "react";
 import MorphingCard from "../components/MorphingCard";
+import VideoEmbed from "../components/VideoEmbed";
 import "../App.css";
 
 export default function Rwanda() {
@@ -7,7 +8,12 @@ export default function Rwanda() {
     <section className="section fade-in tribe-rwanda">
       <h2>Rwandan Culture</h2>
 
-      <MorphingCard icon="📜" title="Key Cultural Practices">
+      <div className="morph-cards-container">
+      <MorphingCard 
+        icon="📜" 
+        title="Key Cultural Practices"
+        backgroundImage="/assets/images/Rwanda%20Dancing.png"
+      >
         <p>
           <strong>Rites of Passage:</strong> Birth is celebrated as a blessing to the family and community; new mothers often receive communal support. Initiation rites traditionally marked the transition from childhood to adulthood, involving teachings about societal responsibilities and values.
         </p>
@@ -23,9 +29,21 @@ export default function Rwanda() {
         <p>
           <strong>Festivals and Ceremonies:</strong> Harvest festivals give thanks for agricultural abundance. Ceremonies for rain or fertility often involve dance, music, and offerings to ancestors. Ancestor veneration is observed through ritual gatherings.
         </p>
+        <div className="image-container">
+          <img
+            src="/assets/images/Rwanda%20Dancing.png"
+            alt="Traditional Rwandan dancing"
+            className="styled-image"
+          />
+          <p className="image-caption">Traditional Rwandan dancers performing cultural ceremonies with intricate movements and vibrant attire.</p>
+        </div>
       </MorphingCard>
 
-      <MorphingCard icon="👗" title="Traditional Attire">
+      <MorphingCard 
+        icon="👗" 
+        title="Traditional Attire"
+        backgroundImage="/assets/images/Rwanda%20Hairstyle.png"
+      >
         <p>
           Traditional Rwandan clothing reflects cultural heritage and maintains significance in ceremonies and cultural identity.
         </p>
@@ -35,12 +53,34 @@ export default function Rwanda() {
           <li><strong>Ceremonial Wear:</strong> During ceremonies, the umushanana is adorned with beads and jewelry to signify status and celebration. Headbands and beaded necklaces are common accessories.</li>
           <li><strong>Cultural Meaning:</strong> White and cream colors symbolize purity and peace. Bright sashes or beads represent joy and festivity during celebrations.</li>
         </ul>
+        <div className="image-container">
+          <img
+            src="/assets/images/Rwanda%20Hairstyle.png"
+            alt="Traditional Rwandan hairstyles and attire"
+            className="styled-image"
+          />
+          <p className="image-caption">Traditional Rwandan hairstyles and ceremonial attire showcasing cultural identity and artistry.</p>
+        </div>
       </MorphingCard>
 
-      <MorphingCard icon="🍲" title="Traditional Foods & Preparation">
+      <MorphingCard 
+        icon="🍲" 
+        title="Traditional Foods & Preparation"
+        backgroundImage="/assets/images/Rwanda%20Farming.png"
+      >
         <p>
           Rwandan cuisine reflects the country's agricultural heritage and emphasizes communal sharing during ceremonies and daily life.
         </p>
+        <div className="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/T5fpKJltUY4"
+            title="Traditional Rwandan Food"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+          <p className="video-caption">Traditional Rwandan culinary practices and food preparation methods that reflect the rich agricultural heritage.</p>
+        </div>
         <ul>
           <li><strong>Staple Foods:</strong> Ugali (maize porridge), beans, sorghum, sweet potatoes, cassava, and bananas form the foundation of Rwandan diet.</li>
           <li><strong>Dairy Products:</strong> Milk is a cherished food, historically linked to cattle herding culture and considered sacred in many communities.</li>
@@ -51,9 +91,21 @@ export default function Rwanda() {
         <p>
           <strong>Food Sharing:</strong> Food is central to ceremonies; communal sharing symbolizes unity and community ties. Guests are served generously to show hospitality and honor.
         </p>
+        <div className="image-container">
+          <img
+            src="/assets/images/Rwanda%20Farming.png"
+            alt="Traditional Rwandan farming practices"
+            className="styled-image"
+          />
+          <p className="image-caption">Traditional Rwandan agricultural practices and farming methods passed down through generations.</p>
+        </div>
       </MorphingCard>
 
-      <MorphingCard icon="💼" title="Traditional Functions & Economic Practices">
+      <MorphingCard 
+        icon="💼" 
+        title="Traditional Functions & Economic Practices"
+        backgroundImage="/assets/images/Rwand%20artisal%20items.png"
+      >
         <p>
           Rwanda's economy traditionally combined agriculture, pastoralism, and specialized crafts, creating diverse livelihood systems.
         </p>
@@ -67,9 +119,21 @@ export default function Rwanda() {
         <p>
           <strong>Main Ceremonies:</strong> Marriage ceremonies, initiation rites, harvest festivals, and birth celebrations that combine economic exchange with cultural expression.
         </p>
+        <div className="image-container">
+          <img
+            src="/assets/images/Rwand%20artisal%20items.png"
+            alt="Traditional Rwandan artisanal crafts"
+            className="styled-image"
+          />
+          <p className="image-caption">Traditional Rwandan artisanal items including baskets, pottery, and handcrafted goods.</p>
+        </div>
       </MorphingCard>
 
-      <MorphingCard icon="🎵" title="Language, Music & Oral Traditions">
+      <MorphingCard 
+        icon="🎵" 
+        title="Language, Music & Oral Traditions"
+        backgroundImage="/assets/images/Rwanda%20Dancing.png"
+      >
         <p>
           <strong>Language:</strong> Kinyarwanda serves as the unifying language that preserves cultural knowledge and traditional practices across all Rwandan communities.
         </p>
@@ -81,10 +145,23 @@ export default function Rwanda() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🙏" title="Beliefs & Spirituality">
+      <MorphingCard 
+        icon="🙏" 
+        title="Beliefs & Spirituality"
+        backgroundImage="/assets/images/Rwanda%20Hairstyle.png"
+      >
         <p>
           Rwandan spiritual practices center around a supreme creator and ancestral connections that guide daily life and community decisions.
         </p>
+        <div className="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/z9H-YzfG-YQ"
+            title="Traditional Rwandan Wedding Ceremony"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        </div>
         <ul>
           <li><strong>Supreme Creator:</strong> Belief in Imana, the supreme creator and source of all life, who influences daily events and provides protection.</li>
           <li><strong>Ancestral Spirits:</strong> Ancestors are honored and called upon for blessings and protection. Regular offerings maintain connections between living and deceased.</li>
@@ -94,7 +171,31 @@ export default function Rwanda() {
         </ul>
       </MorphingCard>
 
-      <MorphingCard icon="🗺️" title="Geography & Modern Influence">
+      <MorphingCard 
+        icon="📺" 
+        title="Cultural Documentary: The Tutsi Tribe"
+        backgroundImage="/assets/images/Rwanda%20Farming.png"
+      >
+        <p>
+          <strong>Historical Perspective:</strong> The Tutsi are one of the three main ethnic groups in Rwanda, traditionally known for their pastoral lifestyle and cattle-herding culture. This documentary provides insights into their historical role in Rwandan society.
+        </p>
+        <VideoEmbed 
+          videoId="PPeDcx21Z_o"
+          title="Documentary Review: Understanding the Tutsi Tribe - Cultural Heritage and Historical Context"
+        />
+        <p>
+          <strong>Cultural Significance:</strong> The Tutsi, along with the Hutu and Twa, form the diverse cultural tapestry of Rwanda. Understanding their traditions, social structures, and contributions to Rwandan culture provides valuable context for appreciating the nation's rich heritage.
+        </p>
+        <p>
+          <strong>Modern Unity:</strong> Today, Rwanda emphasizes unity and shared identity over ethnic divisions, celebrating the common cultural elements that bind all Rwandans together while honoring the diverse traditions that each group has contributed to the national culture.
+        </p>
+      </MorphingCard>
+
+      <MorphingCard 
+        icon="🗺️" 
+        title="Geography & Modern Influence"
+        backgroundImage="/assets/images/EastAfrica.png"
+      >
         <p>
           <strong>Traditional Homeland:</strong> Present-day Rwanda's fertile highlands provide ideal conditions for both agriculture and pastoralism.
         </p>
@@ -112,6 +213,7 @@ export default function Rwanda() {
           <li><strong>Unity and Identity:</strong> Government and private organizations actively promote cultural heritage as part of national identity, emphasizing shared values over divisions.</li>
         </ul>
       </MorphingCard>
+      </div>
     </section>
   );
 }
